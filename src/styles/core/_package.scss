@@ -1,0 +1,199 @@
+.package_container {
+  background-color: $white;
+  box-shadow: $box-shadow-primary;
+  border-radius: $border-radius-default;
+  padding: 20px;
+  display: flex;
+  .pack_product {
+    position: relative;
+    height: 202px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: $border-radius-default;
+    box-shadow: $box-shadow-secondary;
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+      background-color: $white;
+      padding: 20px;
+      margin-top: 10px;
+      // width:60%;
+      box-shadow: $box-shadow-primary;
+      border-radius: $border-radius-default;
+      cursor: pointer;
+      & h3 {
+        color: $outline-color !important;
+        & span {
+          padding: 10px;
+        }
+      }
+    }
+    &_image {
+      height: 55%;
+      border-radius: $border-radius-default;
+      // border:2px solid red;
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+      }
+    }
+    &_checkBox {
+      position: absolute;
+      right: 0;
+      // z-index:5;
+    }
+    &_data {
+      margin: 10px;
+
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      // &__name {
+      //   color: $primary-color !important;
+      //   font-size: $font-size-heading-small !important;
+      //   margin: 0px;
+      //   @include text-ellipsis(1);
+      // }
+      // &__price {
+      //   color: $font-custom-color;
+      //   font-weight: $font-weight-bold-one;
+      //   margin-top: 20px;
+      // }
+    }
+    &_quantity {
+      position: absolute;
+      bottom: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 25px;
+      width: 100%;
+      & div {
+        font-weight: $font-weight-bold-one;
+        font-size: 16px;
+      }
+    }
+    &_add_to_cart {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 10px;
+      &--price {
+        margin-right: 20px;
+        & p {
+          margin-bottom: 0;
+          font-size:16px;
+          font-weight: 600 !important;
+          color: #00FF00 !important;
+        }
+      }
+    }
+    &__plus-icon {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+    }
+    &__highlight {
+      color: $red;
+      background-color: $bright-yellow;
+      border-radius: 5px;
+      height: 10px;
+      font-weight: $font-weight-bold-three;
+      margin-left: 10px;
+    }
+  }
+  .dropDown_arrow {
+    transition: all 0.2s ease;
+    transform: rotate(90deg);
+  }
+}
+.sale__button {
+  background-color: green;
+}
+.edit__wrapper{
+  background-color:$theme-gray;
+  padding: 10px;
+  margin:5px 0;
+}
+.carousel-root{
+  height: 100%;
+  padding: 3px;
+  // border:1px solid black;
+  button{
+    height: fit-content;
+    position: absolute !important;
+    top:50% !important;
+    transform:translateY(-50%);
+
+  }
+}
+.carousel{
+ .thumbs-wrapper {
+    margin: 15px 15px 0 15px;
+    overflow: hidden;
+}
+  img{
+    height: 60px;
+    object-fit:cover;
+  }
+  &.carousel-slider{
+    cursor: pointer;
+    height: auto;
+    &:hover{
+      transform: scale(1.2);
+      z-index: 100;
+    }}
+  .slide {
+    position: relative;
+    img{
+      height:350px;
+      object-fit: fill;
+    }
+  }
+  .control-arrow{
+    opacity: 1 !important;
+    background-color: grey !important;
+  }
+}
+.plus_icon{
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  width: fit-content;
+}
+.pack_product_price{
+  // margin-left:auto;
+  font-size:16px;
+  font-weight: 600 !important;
+  color: $theme-blue !important;
+}
+.pack_product_wrapper{
+  display:flex;
+  align-items:center;
+  img{
+    margin-bottom: 10px;
+  }
+}
+.product_name_wrapper{
+  margin-top:15px;
+  display:flex;
+  justify-content:flex-start;
+  width:100%;
+}
+
+.greenBorder{
+  border:2px solid #00FF00;
+}
+
+.blueBorder{
+  border:2px solid blue;
+}
+
+.list_plus_button{
+  border:none !important;
+}

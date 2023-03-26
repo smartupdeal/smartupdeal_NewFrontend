@@ -1,0 +1,10 @@
+// .home-carousel {
+//     width: 1500px;
+//     height: 00px;
+// }
+
+.sidebar{
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+}

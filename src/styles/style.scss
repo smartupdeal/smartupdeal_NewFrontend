@@ -1,0 +1,30 @@
+/* MERN Theme */
+
+// Import utilities
+@import 'core/utils/fonts';
+@import 'core/utils/reset';
+
+// Import Bootstrap source files
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Import core styles
+@import 'core/core';
+
+// Import custom styles
+@import 'custom';
+
+.sidebar-header-top{
+    margin-top: 5%;
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.close_button {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
