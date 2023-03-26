@@ -19,7 +19,8 @@ import {
   ADD_CATEGORY,
   REMOVE_CATEGORY,
   SET_CATEGORIES_LOADING,
-  RESET_CATEGORY
+  RESET_CATEGORY,
+  CATEGORY_SELECT
 } from './constants';
 
 import handleError from '../../utils/error';

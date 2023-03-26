@@ -24,9 +24,9 @@ import { Carousel } from 'react-responsive-carousel';
 import AddToWishList from '../../components/Store/AddToWishList';
 import Checkbox from '../../components/Common/Checkbox';
 import CountDownTimer from './CountDownTimer';
-import basic from '../../../public/images/mountain-bike.png'
-import firstExpertsimages from '../../../public/images/Expert.png';
-import secondExpertsimages from '../../../public/images/Experts.png'
+// import basic from '../../../public/images/mountain-bike.png'
+// import firstExpertsimages from '../../../public/images/Expert.png';
+// import secondExpertsimages from '../../../public/images/Experts.png'
 import { GOOGLE_CLOUD_BUCKET_URL, BASE_API_URL } from "../../constants";
 const hoursMinSecs = { hours: 1, minutes: 20, seconds: 40 }
 
@@ -160,7 +160,8 @@ class SaleTempPage extends React.PureComponent {
                           className="avatar"
                           onError={({ currentTarget }) => {
                             currentTarget.onerror = null; // prevents looping
-                            currentTarget.src = fallbackImage;
+                            // currentTarget.src = fallbackImage;
+                            currentTarget.src = "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/ee/ee7f704e50f4a220fab16905e2f9c2ea91503dca_full.jpg";
                           }}
                         />
                         <h5 className="display-6 fs-2 font-weight-bold" style={{ marginLeft: '6%' }}>{`${account.firstName} ${account.lastName}`}</h5>
@@ -485,7 +486,7 @@ class SaleTempPage extends React.PureComponent {
               </Row>
               <Row className='flex-row'>
                 <Col className='imageSaleTempCol col-md-6 col-sm-12 col-lg-6 col-12'>
-                  <img className='imageSaleTemp' src={'/images/common/page404.png'} />
+                  {/* <img className='imageSaleTemp' src={'/images/common/page404.png'} /> */}
                 </Col>
                 <Col className='paragraphCol'>
                   <h1>Detailed Analysis for Energy Usage</h1>
@@ -503,7 +504,7 @@ class SaleTempPage extends React.PureComponent {
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro harum fuga itaque nam cupiditate velit, nostrum, non molestiae provident veritatis nisi veniam, magni doloribus? Sint.</p>
                 </Col>
                 <Col className='imageSaleTempCol2 col-md-6 col-sm-12 col-lg-6 col-12'>
-                  <img className='imageSaleTemp' src={'/images/common/page404.png'} />
+                  {/* <img className='imageSaleTemp' src={'/images/common/page404.png'} /> */}
                 </Col>
               </Row>
               {/* 
@@ -547,7 +548,7 @@ class SaleTempPage extends React.PureComponent {
                                   </div>
                                 </div>
                                 {/*  style={{ textAlign: 'center', backgroundColor: 'white', borderRadius: '105px', padding: '20px', height: '160px', width: '164px' }} */}
-                                <img src={basic} style={{ textAlign: 'center', backgroundColor: 'white', borderRadius: '105px', padding: '20px', height: '160px', width: '164px' }} />
+                                {/* <img src={basic} style={{ textAlign: 'center', backgroundColor: 'white', borderRadius: '105px', padding: '20px', height: '160px', width: '164px' }} /> */}
                                 <CardBody>
                                   <CardSubtitle
                                     className="mb-2 text-muted"

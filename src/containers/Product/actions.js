@@ -91,7 +91,10 @@ export const fetchProducts = () => {
 export const filterProducts = (n, v) => {
   return async (dispatch, getState) => {
     try {
-      n === undefined ? dispatch({ type: RESET_ADVANCED_FILTERS }) : '';
+      if (n === undefined) {
+        
+      dispatch({ type: RESET_ADVANCED_FILTERS })
+    }
 
       const s = getState().product.advancedFilters;
       let payload = productsFilterOrganizer(n, v, s);

@@ -7,7 +7,7 @@
  import React from 'react';
 
  import { connect } from 'react-redux';
- import { Switch, Route } from 'react-router-dom';
+ import { Routes , Route } from 'react-router-dom';
  import { Container } from 'reactstrap';
  
  import actions from '../../actions';
@@ -73,7 +73,7 @@
          <main className='main'>
            <Container fluid>
              <div className='wrapper'>
-               <Switch>
+               <Routes >
                  <Route exact path='/' component={HomePage} />
                  <Route path='/shop' component={Shop} />
                  <Route path='/sell' component={Sell} />
@@ -102,7 +102,7 @@
                  />
                  <Route path='/404' component={Page404} />
                  <Route path='*' component={Page404} />
-               </Switch>
+               </Routes >
              </div>
            </Container>
          </main>
@@ -112,11 +112,14 @@
    }
  }
  
- const mapStateToProps = state => {
-   return {
-     authenticated: state.authentication.authenticated,
-     products: state.product.storeProducts
-   };
- };
+//  const mapStateToProps = state => {
+//    return {
+//      authenticated: state.authentication.authenticated,
+//      products: state.product.storeProducts
+//    };
+//  };
  
- export default connect(mapStateToProps, actions)(Application);
+//  export default connect(mapStateToProps, actions)(Application);
+export default Application;
+
+

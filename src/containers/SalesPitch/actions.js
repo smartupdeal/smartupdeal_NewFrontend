@@ -4,7 +4,7 @@
 import { goBack } from 'connected-react-router';
 import { success } from 'react-notification-system-redux';
 import axios from 'axios';
-import { uploadToFireStorage } from '../../firebase/storage';
+// import { uploadToFireStorage } from '../../firebase/storage';
 import {
   FETCH_TEMPS,
   TEMP_CHANGE,
@@ -594,7 +594,7 @@ const mapOptionalProduct = opProduct => {
 
 const uploadMultipleImgToFirestore = async images => {
   let downloadUrlArray = [];
-  images.forEach(e => downloadUrlArray.push(uploadToFireStorage(e, e.name)));
+  // images.forEach(e => downloadUrlArray.push(uploadToFireStorage(e, e.name)));
   return await Promise.all(downloadUrlArray);
 };
 
@@ -604,6 +604,7 @@ export const getProductRating = async slug => {
 
     return response.data.product[0].averageRating;
   } catch (error) {
-    handleError(error, dispatch);
+    // handleError(error, dispatch);
+    console.log("error from handleError without dispatch")
   }
 };

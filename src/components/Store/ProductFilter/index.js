@@ -7,7 +7,7 @@
 import React from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 
-import RangeSlider from '../../Common/RangeSlider';
+// import RangeSlider from '../../Common/RangeSlider';
 
 const priceMarks = {
   1: { label: <p className='fw-1 text-black'>$1</p> },
@@ -71,8 +71,8 @@ const rating = v => {
     case 20:
       return 4;
     default:
-      0;
-      return 5;
+      return 0;
+  
   }
 };
 
@@ -83,7 +83,7 @@ const ProductFilter = props => {
     <div className='product-filter'>
       <Card className='mb-4'>
         <CardHeader tag='h3'>Price</CardHeader>
-        <CardBody>
+        {/* <CardBody>
           <div className='mx-2 mb-3'>
             <RangeSlider
               marks={priceMarks}
@@ -91,15 +91,15 @@ const ProductFilter = props => {
               onChange={v => {
                 filterProducts('price', v);
               }}
-            />
+            /> 
           </div>
-        </CardBody>
+        </CardBody> */}
       </Card>
       <Card>
         <CardHeader tag='h3'>Rating</CardHeader>
-        <CardBody>
+        {/* <CardBody>
           <div className='mx-2 mb-4'>
-            <RangeSlider
+             <RangeSlider
               type='slider'
               marks={rateMarks}
               step={20}
@@ -107,9 +107,9 @@ const ProductFilter = props => {
               onChange={v => {
                 filterProducts('rating', rating(v));
               }}
-            />
+            /> 
           </div>
-        </CardBody>
+        </CardBody> */}
       </Card>
     </div>
   );

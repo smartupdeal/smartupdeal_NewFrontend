@@ -25,7 +25,7 @@ function PackProduct(props) {
     [product.slug]
   );
   const navigateToProduct = () => {
-    event.preventDefault();
+    // event.preventDefault();
     history.push(`/product/${product.slug}`)
   }
   return (

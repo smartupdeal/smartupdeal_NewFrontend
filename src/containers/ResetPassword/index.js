@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Navigate  } from 'react-router-dom';
 
 import actions from '../../actions';
 
@@ -27,7 +27,7 @@ class ResetPassword extends React.PureComponent {
       resetPasswordChange
     } = this.props;
 
-    if (authenticated) return <Redirect to='/dashboard' />;
+    if (authenticated) return <Navigate  to='/dashboard' />;
 
     return (
       <div className='reset-password-form'>

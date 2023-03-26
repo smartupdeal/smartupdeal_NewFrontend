@@ -33,7 +33,7 @@ function ProductImg(props) {
 
   };
   const navigateToProduct = () => {
-    event.preventDefault();
+    // event.preventDefault();
     // history.push(`/product/${product.slug}`)
   }
   return (

@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Routes , Route } from 'react-router-dom';
 
 import actions from '../../actions';
 
@@ -22,14 +22,14 @@ class Category extends React.PureComponent {
 
     return (
       <div className='category-dashboard'>
-        <Switch>
+        <Routes >
           <Route exact path='/dashboard/category' component={List} />
           <Route exact path='/dashboard/category/edit/:id' component={Edit} />
           {/* {user.role === 'ROLE_ADMIN' && ( */}
           <Route exact path='/dashboard/category/add' component={Add} />
           {/* )} */}
           <Route path='*' component={Page404} />
-        </Switch>
+        </Routes >
       </div>
     );
   }

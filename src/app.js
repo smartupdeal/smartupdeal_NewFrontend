@@ -1,6 +1,7 @@
 
 import Application from './containers/Application';
 import ScrollToTop from './scrollToTop';
+import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import store from  './store';
@@ -18,19 +19,21 @@ import 'simple-line-icons/css/simple-line-icons.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 // rc-slider style
-import 'rc-slider/assets/index.css';
+// import 'rc-slider/assets/index.css';
 
 // Authentication
 const token = localStorage.getItem('token');
 
 function App() {
   return (
+    <BrowserRouter>
     <Provider store={store}>
       <ScrollToTop>
         <Application />
       </ScrollToTop>
       <h1 className='header-info'>hello world</h1>
     </Provider>
+    </BrowserRouter>
   );
 }
 

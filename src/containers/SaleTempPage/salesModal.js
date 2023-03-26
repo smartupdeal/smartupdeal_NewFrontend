@@ -170,7 +170,9 @@ class SalesModal extends React.Component {
                                   className="avatar"
                                   onError={({ currentTarget }) => {
                                     currentTarget.onerror = null; // prevents looping
-                                    currentTarget.src = fallbackImage;
+                                    // currentTarget.src = fallbackImage;
+                                    currentTarget.src = "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/ee/ee7f704e50f4a220fab16905e2f9c2ea91503dca_full.jpg";
+                                  
                                   }}
                                 />
                                <h5 className="display-6 fs-2 font-weight-bold" style={{ marginLeft: '22%' }}>{`${account.firstName} ${account.lastName}`}</h5>
