@@ -9,7 +9,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { formatDate } from '../../../helpers/date';
-import { FIRESTORE_LINK } from '../../../constants'
+// import { FIRESTORE_LINK } from '../../../constants'
+import PlaceholderImage from "../../../assets/images/placeholder-image.png"
 import Button from '../../Common/Button';
 import { XIcon } from '../../Common/Icon';
 
@@ -24,12 +25,17 @@ console.log(wishlist)
       const SaleTemp = item.SaleTemp;
       return (
         <div className='d-flex flex-column justify-content-center align-items-center'>
-          <img
+          {/* <img
             className='item-image'
             src={`${product
                 ? product.imageUrl
-                : SaleTemp ? `${FIRESTORE_LINK}/${SaleTemp.imageUrls[0]}` : '/images/placeholder-image.png'
+                : SaleTemp ? `${FIRESTORE_LINK}/${SaleTemp.imageUrls[0]}` : 
+                '/images/placeholder-image.png'
               }`}
+          /> */}
+          <img
+            className='item-image'
+            src={PlaceholderImage}
           />
         </div>
       );

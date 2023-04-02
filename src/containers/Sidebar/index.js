@@ -4,7 +4,7 @@ import { ProSidebarProvider, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import classNames from "classnames";
 import Button from "../../components/Common/Button";
 import { CloseIcon } from "../../components/Common/Icon";
-// import RangeSlider from "../../components/Common/RangeSlider";
+import RangeSlider from "../../components/Common/RangeSlider";
 import Summary from "../../components/Store/ProductReviews/Summary";
 import { Link } from "react-router-dom";
 
@@ -322,7 +322,7 @@ const SideBar = ({ isOpen, toggle,openSidebar,closeSidebar }) => {
         </div>
         <div style={{ marginLeft: '10%', marginTop: '10%', paddingBottom: '10%', marginRight: '5%' }}>
             <div className='mx-2 mb-4'>
-                {/* <RangeSlider
+                <RangeSlider
                     type='slider'
                     marks={rateMarks}
                     step={20}
@@ -330,7 +330,7 @@ const SideBar = ({ isOpen, toggle,openSidebar,closeSidebar }) => {
                     onChange={v => {
                         filterProducts('rating', rating(v));
                     }}
-                /> */}
+                />
             </div>
         </div>
     </div>

@@ -5,4 +5,4 @@ export const GENDER={
     FEMALE:'F',
     NONE:'N'
 }
-export const FIRESTORE_LINK='https://firebasestorage.googleapis.com/v0/b'
+// export const FIRESTORE_LINK='https://firebasestorage.googleapis.com/v0/b'

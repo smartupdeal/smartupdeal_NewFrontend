@@ -117,12 +117,14 @@ $layout-transition-speed: 0.3s !default;
 $layout-transition-higher-speed: 0.6s !default;
 
 // icons
-// $twitter: url('/public/images/social-icons/twitter.svg');
-// $pinterest: url('/public/images/social-icons/pinterest.svg');
-// $instagram: url('/public/images/social-icons/instagram.svg');
-// $facebook: url('/public/images/social-icons/facebook.svg');
+// $twitter: url('/images/social-icons/twitter.svg');
+$twitter: url('../../assets/images/social-icons/twitter.svg');
 
-// $bars: url('/public/images/bars.png');
-// $chevron-down: url('/public/images/chevron-down.svg');
-// $close: url('/public/images/close.svg');
-// $bag: url('/public/images/bag.svg');
+$pinterest: url('../../assets/images/social-icons/pinterest.svg');
+$instagram: url('../../assets/images/social-icons/instagram.svg');
+$facebook: url('../../assets/images/social-icons/facebook.svg');
+
+$bars: url('../../assets/images/bars.png');
+$chevron-down: url('../../assets/images/chevron-down.svg');
+$close: url('../../assets/images/close.svg');
+$bag: url('../../assets/images/bag.svg');

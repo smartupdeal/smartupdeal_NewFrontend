@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import actions from '../../actions';
 import { connect } from 'react-redux';
-import { FIRESTORE_LINK } from '../../constants';
+// import { FIRESTORE_LINK } from '../../constants';
 import SocialShare from '../../components/Store/SocialShare';
 import { BagIcon } from '../../components/Common/Icon';
 class ProductModal extends React.Component {

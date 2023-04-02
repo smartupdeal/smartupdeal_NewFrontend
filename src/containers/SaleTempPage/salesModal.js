@@ -4,7 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import actions from '../../actions';
 import { connect } from 'react-redux';
-import { FIRESTORE_LINK } from '../../constants';
+// import { FIRESTORE_LINK } from '../../constants';
+import PlaceholderImage from "../../assets/images/placeholder-image.png";
 import SocialShare from '../../components/Store/SocialShare';
 import { BagIcon } from '../../components/Common/Icon';
 import moment from 'moment';
@@ -47,7 +48,8 @@ class SalesModal extends React.Component {
                 <Carousel dynamicHeight={false} showThumbs={false}>
                   {saleTemp?.imageUrls.map(e => (
                     <div key={e} className='image_container'>
-                      <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} />
+                      {/* <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} /> */}
+                      <img src={PlaceholderImage} />
                       {/* <div className="lens"></div>
                        <div className="result"></div> */}
                     </div>
@@ -170,9 +172,7 @@ class SalesModal extends React.Component {
                                   className="avatar"
                                   onError={({ currentTarget }) => {
                                     currentTarget.onerror = null; // prevents looping
-                                    // currentTarget.src = fallbackImage;
-                                    currentTarget.src = "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/ee/ee7f704e50f4a220fab16905e2f9c2ea91503dca_full.jpg";
-                                  
+                                    currentTarget.src = fallbackImage;
                                   }}
                                 />
                                <h5 className="display-6 fs-2 font-weight-bold" style={{ marginLeft: '22%' }}>{`${account.firstName} ${account.lastName}`}</h5>

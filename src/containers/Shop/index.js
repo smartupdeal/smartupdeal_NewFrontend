@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Routes , Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 
 import actions from '../../actions';
@@ -45,7 +45,7 @@ class Shop extends React.PureComponent {
         <Row xs='12'>
           <Col
             xs='3'
-            // xs={{ size: 12, order: 1 }}
+            xs={{ size: 12, order: 1 }}
             sm={{ size: 12, order: 1 }}
             md={{ size: 12, order: 1 }}
             lg={{ size: 3, order: 1 }}
@@ -58,7 +58,7 @@ class Shop extends React.PureComponent {
           </Col>
           <Col
             xs='9'
-            // xs={{ size: 12, order: 2 }}
+            xs={{ size: 12, order: 2 }}
             sm={{ size: 12, order: 2 }}
             md={{ size: 12, order: 2 }}
             lg={{ size: 9, order: 2 }}
@@ -66,7 +66,7 @@ class Shop extends React.PureComponent {
             <Row className='align-items-center'>
               <Col
                 xs='6'
-                // xs={{ size: 12, order: 1 }}
+                xs={{ size: 12, order: 1 }}
                 sm={{ size: 12, order: 1 }}
                 md={{ size: 5, order: 1 }}
                 lg={{ size: 6, order: 1 }}
@@ -98,7 +98,7 @@ class Shop extends React.PureComponent {
               </Col>
               <Col
                 xs='4'
-                // xs={{ size: 12, order: 2 }}
+                xs={{ size: 12, order: 2 }}
                 sm={{ size: 12, order: 2 }}
                 md={{ size: 5, order: 2 }}
                 lg={{ size: 4, order: 2 }}
@@ -113,12 +113,12 @@ class Shop extends React.PureComponent {
                 />
               </Col>
             </Row>
-            <Routes >
+            <Switch>
               <Route exact path='/shop' component={ProductsShop} />
               <Route path='/shop/category/:slug' component={CategoryShop} />
               <Route path='/shop/brand/:slug' component={BrandsShop} />
               <Route path='*' component={Page404} />
-            </Routes >
+            </Switch>
 
             {totalProducts >= 8 && (
               <div className='d-flex justify-content-center text-center mt-4'>

@@ -353,7 +353,7 @@ body.user-is-tabbing button:focus {
   cursor: pointer;
   position: relative;
   background-size: 16px;
-  // @include icon($close, 25px, 25px);
+  @include icon($close, 25px, 25px);
 
   &:hover {
     opacity: 0.5;

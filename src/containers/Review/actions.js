@@ -253,7 +253,7 @@ export const getReviewsSummary = reviews => {
 
           break;
         default:
-          
+          0;
           break;
       }
     });

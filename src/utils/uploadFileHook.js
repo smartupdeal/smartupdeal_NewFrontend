@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React from 'react';
 
 export const DEFAULT_MAX_FILE_SIZE_IN_BYTES = 500000;

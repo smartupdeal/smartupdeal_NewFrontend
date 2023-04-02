@@ -9,8 +9,8 @@
  import { Link } from 'react-router-dom';
  import { Container } from 'reactstrap';
  import Newsletter from '../../../containers/Newsletter';
-//  import googleplay from'../../../../public/images/googleplay.png';
-//  import appstore from '../../../../public/images/app-store-png-logo-33107.png';
+ import googleplay from'../../../assets/images/googleplay.png';
+ import appstore from '../../../assets/images/app-store-png-logo-33107.png';
  
  const Footer = () => {
    const infoAboutLinks = [
@@ -66,8 +66,8 @@
              Smartupdeal addresses the realization of a brighter future. We help you to explore futuristic approaches with the latest technologies.
              </div>
              {/* <button id="home_button" style={{ backgroundImage:`url(${image})` }}>click me</button> */}
-           {/* <img  src={googleplay} height={90} width={90}/>
-           <img  src={appstore} height={90} width={90}/> */}
+           <img  src={googleplay} height={90} width={90}/>
+           <img  src={appstore} height={90} width={90}/>
  
            </div>
            <div className='footer-block'>

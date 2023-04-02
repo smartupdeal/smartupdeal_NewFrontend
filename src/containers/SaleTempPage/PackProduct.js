@@ -1,5 +1,6 @@
 import React from 'react';
-import { FIRESTORE_LINK } from '../../constants';
+// import { FIRESTORE_LINK } from '../../constants';
+import PlaceholderImage from "../../assets/images/placeholder-image.png";
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import Button from '../../components/Common/Button';
@@ -25,7 +26,7 @@ function PackProduct(props) {
     [product.slug]
   );
   const navigateToProduct = () => {
-    // event.preventDefault();
+    event.preventDefault();
     history.push(`/product/${product.slug}`)
   }
   return (

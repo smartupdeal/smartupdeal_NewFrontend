@@ -11,7 +11,7 @@ import ReactStars from 'react-rating-stars-component';
 
 import { formatDate } from '../../../helpers/date';
 import { getRandomColors } from '../../../helpers';
-import {FIRESTORE_LINK} from '../../../constants'
+// import {FIRESTORE_LINK} from '../../../constants'
 import Button from '../../Common/Button';
 import { CheckIcon, RefreshIcon, TrashIcon } from '../../Common/Icon';
 
@@ -49,7 +49,7 @@ const ReviewList = props => {
       const saleTemp = review.saleTemp;
       return (
         <div className='d-flex flex-column justify-content-center align-items-center'>
-          <img className='item-image' src={`${saleTemp.imageUrl ?  `${FIRESTORE_LINK}/${saleTemp.imageUrl}` : '/images/placeholder-image.png'}`} />
+          {/* <img className='item-image' src={`${saleTemp.imageUrl ?  `${FIRESTORE_LINK}/${saleTemp.imageUrl}` : '/images/placeholder-image.png'}`} /> */}
         </div>
       );
     }

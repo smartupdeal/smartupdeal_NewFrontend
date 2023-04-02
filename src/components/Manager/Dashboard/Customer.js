@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { Routes , Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 
 import AccountMenu from '../AccountMenu';
@@ -28,7 +28,7 @@ const Customer = props => {
         </Col>
         <Col xs='12' md='7' xl='9'>
           <div className='panel-body'>
-            <Routes >
+            <Switch>
               <Route exact path='/dashboard/account' component={Account} />
               <Route path='/dashboard/security' component={AccountSecurity} />
               <Route path='/dashboard/address' component={Address} />
@@ -36,7 +36,7 @@ const Customer = props => {
               <Route path='/dashboard/wishlist' component={Wishlist} />
               <Route path='/dashboard/support' component={Support} />
               <Route path='*' component={Page404} />
-            </Routes >
+            </Switch>
           </div>
         </Col>
       </Row>

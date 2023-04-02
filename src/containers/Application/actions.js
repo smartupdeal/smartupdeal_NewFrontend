@@ -6,9 +6,6 @@
 import axios from "axios";
 import { DEFAULT_ACTION,FETCH_SKILLS,FETCH_INDUSTRIES,FETCH_TECHNOLOGIES } from './constants';
 
-import handleError from "../../utils/error"
-
-
 export const defaultAction = () => {
   return {
     type: DEFAULT_ACTION

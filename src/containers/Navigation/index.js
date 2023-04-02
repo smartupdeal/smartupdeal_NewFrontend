@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Link, NavLink as ActiveLink } from 'react-router-dom';
+import { Link, NavLink as ActiveLink, withRouter } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
@@ -35,32 +35,6 @@ import MiniBrand from '../../components/Store//MiniBrand';
 import Menu from '../NavigationMenu';
 import Cart from '../Cart';
 // import '../../styles/core/_navigation.scss'
-
-
-import {
-  useLocation,
-  useNavigate,
-  useParams
-} from "react-router-dom";
-
-function withRouter(Component) {
-  function ComponentWithRouterProp(props) {
-    let location = useLocation();
-    let navigate = useNavigate();
-    let params = useParams();
-    return (
-      <Component
-        {...props}
-        router={{ location, navigate, params }}
-      />
-    );
-  }
-
-  return ComponentWithRouterProp;
-}
-
-
-
 class Navigation extends React.PureComponent {
 
   constructor(props) {
@@ -341,7 +315,7 @@ class Navigation extends React.PureComponent {
               </Dropdown>
               <div className='navbar-size'>
 
-                {/* <Autosuggest
+                <Autosuggest
                   suggestions={suggestions}
                   onSuggestionsFetchRequested={onSuggestionsFetchRequested}
                   onSuggestionsClearRequested={onSuggestionsClearRequested}
@@ -351,7 +325,7 @@ class Navigation extends React.PureComponent {
                   onSuggestionSelected={(_, item) => {
                     c
                   }}
-                /> */}
+                />
               </div>
             </Col>
             <Col

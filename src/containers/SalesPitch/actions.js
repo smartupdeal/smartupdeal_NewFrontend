@@ -594,8 +594,9 @@ const mapOptionalProduct = opProduct => {
 
 const uploadMultipleImgToFirestore = async images => {
   let downloadUrlArray = [];
+  console.log("images ==>", images)
   // images.forEach(e => downloadUrlArray.push(uploadToFireStorage(e, e.name)));
-  return await Promise.all(downloadUrlArray);
+  // return await Promise.all(downloadUrlArray);
 };
 
 export const getProductRating = async slug => {
@@ -604,7 +605,6 @@ export const getProductRating = async slug => {
 
     return response.data.product[0].averageRating;
   } catch (error) {
-    // handleError(error, dispatch);
-    console.log("error from handleError without dispatch")
+    handleError(error, dispatch);
   }
 };

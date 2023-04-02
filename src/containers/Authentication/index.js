@@ -6,29 +6,29 @@
 
 import React from 'react';
 
-import { Navigate  } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 import actions from '../../actions';
 
 export default function (ComposedComponent) {
   class Authentication extends React.PureComponent {
     render() {
-      // const { authenticated } = this.props || false;
+      const { authenticated } = this.props;
 
-      // if (!authenticated) {
-      //   return <Navigate  to='/login' />;
-      // } else {
+      if (!authenticated) {
+        return <Redirect to='/login' />;
+      } else {
         return <ComposedComponent {...this.props} />;
-      // }
+      }
     }
   }
 
-  // const mapStateToProps = state => {
-  //   return {
-  //     authenticated: state.authentication.authenticated || false
-  //   };
-  // };
+  const mapStateToProps = state => {
+    return {
+      authenticated: state.authentication.authenticated
+    };
+  };
 
-  // return connect(mapStateToProps, actions)(Authentication);
-
+  return connect(mapStateToProps, actions)(Authentication);
 }

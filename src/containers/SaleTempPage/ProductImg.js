@@ -1,5 +1,5 @@
 import React from 'react';
-import { FIRESTORE_LINK } from '../../constants';
+// import { FIRESTORE_LINK } from '../../constants';
 import { Link } from 'react-router-dom';
 import ProductModal from './productModal';
 import { Row, Col } from 'reactstrap';
@@ -33,7 +33,7 @@ function ProductImg(props) {
 
   };
   const navigateToProduct = () => {
-    // event.preventDefault();
+    event.preventDefault();
     // history.push(`/product/${product.slug}`)
   }
   return (
