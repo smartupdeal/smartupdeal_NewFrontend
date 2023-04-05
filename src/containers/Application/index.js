@@ -9,7 +9,7 @@
  import { connect } from 'react-redux';
  import { Switch, Route } from 'react-router-dom';
  import { Container } from 'reactstrap';
- 
+ import axios from 'axios';
  import actions from '../../actions';
  
  // routes
@@ -39,6 +39,9 @@
  
  class Application extends React.PureComponent {
    componentDidMount() {
+
+    
+    axios.defaults.baseURL = 'http://localhost:3000/'
      const token = localStorage.getItem('token');
  
      if (token) {
