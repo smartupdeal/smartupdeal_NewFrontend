@@ -9,7 +9,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import actions from '../../actions';
-import banners from './banners.json';
+// import banners from './banners.json';
+import imageYU from '../../assets/images/banners/banner-1.jpg';
+import imageYU1 from '../../assets/images/banners/banner-2.jpg';
+import imageYU2 from '../../assets/images/banners/banner-3.jpg';
+
 import SideBar from '../Sidebar';
 import CarouselSlider from '../../components/Common/CarouselSlider';
 import SaleTempList from '../../components/Store/SaleTempList';
@@ -20,6 +24,7 @@ class Homepage extends React.PureComponent {
   componentDidMount() {
     this.props.fetchSaleTemps();
   }
+  
 
   render() {
     return (
@@ -32,10 +37,46 @@ class Homepage extends React.PureComponent {
                 showDots={true}
                 infinite={true}
                 autoPlay={true}
-                children={banners}
+                children={[
+                  {
+                    "imageUrl": imageYU,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  },{
+                    "imageUrl": imageYU1,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  },
+                  {
+                    "imageUrl": imageYU2,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  }
+
+                ]}
                 responsive={responsiveOneItemCarousel}
               >
-                {banners.map((item, index) => {
+              
+                {[{
+                    "imageUrl": imageYU,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  },{
+                    "imageUrl": imageYU1,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  },
+                  {
+                    "imageUrl": imageYU2,
+                    "link": "",
+                    "title": "",
+                    "content": "<p></p>\n"
+                  }].map((item, index) => {
                   return <div key={index} style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center' }} >
                     <img key={index} src={item.imageUrl} style={{ height: '380px', width: '100%' }} />
                   </div>
