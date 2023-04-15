@@ -9,6 +9,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink as ActiveLink, withRouter } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
+import pp from "../../assets/images/logo.png";
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
 import {
@@ -222,7 +223,9 @@ class Navigation extends React.PureComponent {
                   icon={<BarsIcon />}
                   onClick={() => this.toggleMenu()}
                 />
-                <img className='logo-image' style={{ margin: '5%' }} src='/images/logo.png' />
+                {/* <img className='logo-image' style={{ margin: '5%' }} src='/images/logo.png' /> */}
+                <img className='logo-image' style={{ margin: '5%' }} src={pp} />
+
 
               </div>
             
