@@ -15,6 +15,8 @@ import NotFound from '../../components/Common/NotFound';
 import { BagIcon } from '../../components/Common/Icon';
 import ProductReviews from '../../components/Store/ProductReviews';
 import SocialShare from '../../components/Store/SocialShare';
+import pp from "../../assets/images/placeholder-image.png"
+
 
 class ProductPage extends React.PureComponent {
   componentDidMount() {
@@ -64,11 +66,12 @@ class ProductPage extends React.PureComponent {
                 <div className='position-relative'>
                   <img
                     className='item-image'
-                    src={`${
-                      product.imageUrl
-                        ? product.imageUrl
-                        : '/images/placeholder-image.png'
-                    }`}
+                    // src={`${
+                    //   product.imageUrl
+                    //     ? product.imageUrl
+                    //     : '/images/placeholder-image.png'
+                    // }`}
+                    src={pp}
                   />
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
                     <p className='stock out-of-stock'>Out of stock</p>

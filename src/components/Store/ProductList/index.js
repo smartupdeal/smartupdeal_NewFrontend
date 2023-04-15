@@ -6,6 +6,8 @@
 
 import React from 'react';
 
+import pp from "../../../assets/images/placeholder-image.png"
+
 import { Link } from 'react-router-dom';
 
 import AddToWishList from '../AddToWishList';
@@ -37,11 +39,12 @@ const ProductList = props => {
                     <div className='item-image-box'>
                       <img
                         className='item-image'
-                        src={`${
-                          product.imageUrl
-                            ? product.imageUrl
-                            : '/images/placeholder-image.png'
-                        }`}
+                        // src={`${
+                        //   product.imageUrl
+                        //     ? product.imageUrl
+                        //     : '/images/placeholder-image.png'
+                        // }`}
+                        src={pp}
                       />
                     </div>
                   </div>
