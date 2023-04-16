@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactStars from "react-rating-stars-component";
 import { TbArrowsSort } from "react-icons/tb";
 import { IoFilterSharp } from "react-icons/io5";
-// import { FIRESTORE_LINK } from '../../../constants'
+import { FIRESTORE_LINK } from '../../../constants'
 import PlaceholerImage from "../../../assets/images/placeholder-image.png";
 
 import { Link } from 'react-router-dom';
@@ -82,11 +82,11 @@ const SaleTempList = props => {
                     <div className='item-image-box'>
                       <img
                         className='item-image'
-                        // src={`${temp.imageUrls
-                        //   ? `${FIRESTORE_LINK}/${temp.imageUrls[0]}`
-                        //   : '/images/placeholder-image.png'
-                        //   }`}
-                        src={PlaceholerImage}
+                        src={`${temp.imageUrls
+                          ? `${FIRESTORE_LINK}/${temp.imageUrls[0]}`
+                          : '/images/placeholder-image.png'
+                          }`}
+                        // src={PlaceholerImage}
                       />
                     </div>
                   </div>

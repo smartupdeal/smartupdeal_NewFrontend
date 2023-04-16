@@ -7,7 +7,7 @@ import actions from '../../actions';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 import SocialShare from '../../components/Store/SocialShare';
-// import { FIRESTORE_LINK } from '../../constants';
+import { FIRESTORE_LINK } from '../../constants';
 import Button from '../../components/Common/Button';
 import ProductReviews from '../../components/Store/ProductReviews';
 import CarouselSlider from '../../components/Common/CarouselSlider';
@@ -180,8 +180,8 @@ class SaleTempPage extends React.PureComponent {
                     <Carousel dynamicHeight={false}>
                       {saleTemp?.imageUrls.map(e => (
                         <div key={e} className='image_container'>
-                          {/* <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} /> */}
-                          <img src={PlaceholderImage}/>
+                          <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} />
+                          {/* <img src={PlaceholderImage}/> */}
                           {/* <div className="lens"></div>
                        <div className="result"></div> */}
                         </div>
@@ -760,6 +760,8 @@ class SaleTempPage extends React.PureComponent {
                     </div>
                     <div className='flex-row product-list' style={{ backgroundColor: 'white', boxShadow: 'box-shadow-primary', borderRadius: 'border-radius-default', height: '10%' }}>
                       {this.props.saleTemps.map((temp, index) => {
+
+                        console.log("saleTemp jdkjfo ==>", temp)
                         return index <= 3 && <div className='product-container' key={temp._id}>
                           <div className='item-box'  >
                             <div className='item-link'>
@@ -771,12 +773,12 @@ class SaleTempPage extends React.PureComponent {
                                   <div className='item-image-box'>
                                     <img
                                       className='item-image'
-                                      // src={`${temp.imageUrls
-                                      //   ? `${FIRESTORE_LINK}/${temp.imageUrls[0]}`
-                                      //   : '/images/placeholder-image.png'
-                                      //   }`}
-                                      src={PlaceholderImage}
-                                    />
+                                      src={`${temp.imageUrls
+                                        ? `${FIRESTORE_LINK}/${temp.imageUrls[0]}`
+                                        : '/images/placeholder-image.png'
+                                        }`}
+                                        />
+                                        {/* src={PlaceholderImage} */}
                                   </div>
                                 </div>
                                 <div className='item-body'>

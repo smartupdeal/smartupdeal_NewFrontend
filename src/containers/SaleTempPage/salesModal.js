@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import actions from '../../actions';
 import { connect } from 'react-redux';
-// import { FIRESTORE_LINK } from '../../constants';
+import { FIRESTORE_LINK } from '../../constants';
 import PlaceholderImage from "../../assets/images/placeholder-image.png";
 import SocialShare from '../../components/Store/SocialShare';
 import { BagIcon } from '../../components/Common/Icon';
@@ -48,8 +48,8 @@ class SalesModal extends React.Component {
                 <Carousel dynamicHeight={false} showThumbs={false}>
                   {saleTemp?.imageUrls.map(e => (
                     <div key={e} className='image_container'>
-                      {/* <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} /> */}
-                      <img src={PlaceholderImage} />
+                      <img src={`${e ? `${FIRESTORE_LINK}/${e}` : '/images/placeholder-image.png'}`} />
+                      {/* <img src={PlaceholderImage} /> */}
                       {/* <div className="lens"></div>
                        <div className="result"></div> */}
                     </div>

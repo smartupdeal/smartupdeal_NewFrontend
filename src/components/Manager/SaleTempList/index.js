@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import {FIRESTORE_LINK} from '../../../constants'
+import {FIRESTORE_LINK} from '../../../constants'
 const SaleTempList=(props)=> {
     const {saleTemps}=props
     return (
@@ -15,9 +15,9 @@ const SaleTempList=(props)=> {
             <img
           className='item-image'
           src={`${
-            // saleTemp && saleTemp?.imageUrls
-            //   ? `${FIRESTORE_LINK}/${saleTemp?.imageUrls[0]}`
-            //   : 
+            saleTemp && saleTemp?.imageUrls
+              ? `${FIRESTORE_LINK}/${saleTemp?.imageUrls[0]}`
+              : 
               '/images/placeholder-image.png'
           }`}
         />
