@@ -29,9 +29,11 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 // rc-slider style
 import 'rc-slider/assets/index.css';
 
+import axios from 'axios';
+
 // Authentication
 const token = localStorage.getItem('token');
-
+axios.defaults.baseURL = 'http://localhost:4000/'
 if (token) {
   // authenticate api authorization
   setToken(token);

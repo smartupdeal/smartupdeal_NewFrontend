@@ -27,9 +27,9 @@ const handleError = (err, dispatch, title = '') => {
       //   'Your request could not be processed. Please try again.';
       // dispatch(error(unsuccessfulOptions));
     } else if (err.response.status === 401) {
-      unsuccessfulOptions.message = 'Unauthorized Access! Please login again';
-      dispatch(signOut());
-      dispatch(error(unsuccessfulOptions));
+      // unsuccessfulOptions.message = 'Unauthorized Access! Please login again';
+      // dispatch(signOut());
+      // dispatch(error(unsuccessfulOptions));
     } else if (err.response.status === 403) {
       unsuccessfulOptions.message =
         'Forbidden! You are not allowed to access this resource.';

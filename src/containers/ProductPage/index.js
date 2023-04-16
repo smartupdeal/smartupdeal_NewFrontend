@@ -66,12 +66,12 @@ class ProductPage extends React.PureComponent {
                 <div className='position-relative'>
                   <img
                     className='item-image'
-                    // src={`${
-                    //   product.imageUrl
-                    //     ? product.imageUrl
-                    //     : '/images/placeholder-image.png'
-                    // }`}
-                    src={pp}
+                    src={
+                      product.imageUrl
+                        ? product.imageUrl
+                        : pp
+                    }
+                    // src={pp}
                   />
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
                     <p className='stock out-of-stock'>Out of stock</p>
